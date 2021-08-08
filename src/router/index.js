@@ -6,7 +6,18 @@ import Layout from '@/layout'
 
 // import documentation from '@/views/documentation/index'
 
-export const asyncRoutes = [{}]
+export const asyncRoutes = [{
+    path: '/icon',
+    component: Layout,
+    children: [
+        {
+            path: 'index',
+            component: () => import('@/views/icons/index'),
+            name: 'Icons',
+            meta: { title: 'Icons', icon: 'icon', noCache: true }
+        }
+    ]
+}]
 export const constantRoutes = [
     {
         path: '/login',

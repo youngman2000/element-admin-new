@@ -1,10 +1,10 @@
 <template>
-  <div></div>
+  <div class="icons-container"></div>
 </template>
 
 <script>
 export default {
-  name: 'dashboard'
+  name: 'icons'
 }
 </script>
 

@@ -7,6 +7,7 @@ import store from './store'
 import router from './router'
 import Element from 'element-ui'
 import './icons'
+import './permission'
 Vue.config.productionTip = false
 
 if (process.env.NODE_ENV === 'development') {

@@ -3,7 +3,6 @@ import store from '@/store'
 import { getToken } from "@/utils/auth";
 import { Message, MessageBox } from "element-ui";
 
-console.log(process);
 
 const service = axios.create({
     baseUrl: process.env.VUE_APP_BASE_API,

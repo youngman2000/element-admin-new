@@ -1,10 +1,10 @@
 <template>
   <component :is="type" v-bind="linkProps(to)">
-    <solt></solt>
+    <slot />
   </component>
 </template>
 <script>
-import {isExternal} from '@/utils/validate'
+import { isExternal } from '@/utils/validate'
 
 export default {
   props: {

@@ -8,6 +8,7 @@ function hasPermission(roles, route) {
     }
 }
 
+
 export function filterAsyncRoutes(routes, roles) {
     const res = []
     routes.forEach(route => {

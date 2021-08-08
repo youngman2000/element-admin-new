@@ -1,5 +1,5 @@
 <template>
-  <div :class="{active:isShow}" class="share-dropdown-menu">
+  <div :class="{active:isActive}" class="share-dropdown-menu">
     <div class="share-dropdown-menu-wrapper">
       <span class="share-dropdown-menu-title" @click.self="clickTitle">
         {{ title }}
@@ -41,7 +41,7 @@ export default {
 </script>
 <style lang="scss">
 $n: 9;
-$t: .1s;
+$t: 0.1s;
 .share-dropdown-menu {
   width: 250px;
   position: relative;
@@ -78,17 +78,17 @@ $t: .1s;
     font-size: 18px;
     overflow: hidden;
     opacity: 1;
-    transition: transform .28s ease;
+    transition: transform 0.28s ease;
 
     &:hover {
       background: #000;
-      color: white;
+      color: #fff;
     }
 
     @for $i from 1 through $n {
       &:nth-of-type(#{$i}) {
-        z-index: 1;
-        transition-delay: $i*$t;
+        z-index: -1;
+        transition-delay: $i * $t;
         transform: translate3d(0, -60px, 0);
       }
     }
@@ -102,8 +102,8 @@ $t: .1s;
     .share-dropdown-menu-item {
       @for $i from 1 through $n {
         &:nth-of-type(#{$i}) {
-          transition-delay: ($n - $i)*$t;
-          transform: translate3d(0, ($i - 1)*60px, 0);
+          transition-delay: ($n - $i) * $t;
+          transform: translate3d(0, ($i - 1) * 60px, 0);
         }
       }
     }

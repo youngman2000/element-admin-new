@@ -13,6 +13,7 @@ const modules = modulesFiles.keys().reduce((modules, modulesPath) => {
     return modules;
 }, {})
 
+
 const store = new Vuex.Store({
     modules,
     getters
